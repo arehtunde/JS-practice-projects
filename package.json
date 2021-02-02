@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "sass scss/scss src/css --watch",
+    "scss": "sass src/style.scss src/style.css --watch",
     "autoprefixer": "postcss src/style.css --use autoprefixer -o dist/style.css -w",
-    "lint": "eslint src/js",
-    "serve": "browser-sync start --server --files '.css, **/*.html'",
-    "start": "run-p serve scss autoprefixer"
+    "lint": "eslint src/index.js",
+    "serve": "browser-sync start --server --files 'dist/*.css, **/*.html'",
+    "start": "run-p serve scss autoprefixer lint"
   },
   "repository": {
     "type": "git",
@@ -22,12 +22,12 @@
   },
   "homepage": "https://github.com/arehtunde/js-practice-projects#readme",
   "dependencies": {
-    "normalize.css": "^8.0.1",
-    "cssnano": "^4.1.10"
+    "normalize.css": "^8.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.4",
     "browser-sync": "^2.26.14",
+    "cssnano": "^4.1.10",
     "eslint": "^7.19.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1",

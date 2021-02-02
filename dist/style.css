@@ -1,0 +1,14 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: purple;
+  color: red;
+}
+
+.nav_link {
+  list-style: none;
+  font-size: 2.5rem;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9zdHlsZS5zY3NzIiwiLi4vc3JjL3N0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLG9CQUFBO0VBQUEsb0JBQUE7RUFBQSxhQUFBO0VBQ0Esd0JBQUE7RUFDQSxVQUFBO0FDQ0Y7O0FESUU7RUFDRSxnQkFBQTtFQUNBLGlCQUFBO0FDREoiLCJmaWxlIjoic3R5bGUuY3NzIn0= */
