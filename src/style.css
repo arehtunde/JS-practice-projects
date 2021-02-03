@@ -42,6 +42,14 @@ nav {
   margin-right: 1rem;
 }
 
+a {
+  text-decoration: none;
+  color: #011b33;
+}
+a:hover {
+  color: red;
+}
+
 main {
   display: flex;
   flex-direction: column;
