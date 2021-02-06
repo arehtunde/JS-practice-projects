@@ -1,9 +1,7 @@
 # JS-practice-projects
 
-### Color Flipper page
+### Counter
 
-The navigation menu consist of **Simple** and **Hex**
+Simple Counter to increment and decrement count
 
-The **Simple** menu consist of limited hard-coded colors
-
-While the **Hex** menu contains more random generated hex-code colors
+Consist of 3 buttons to increase and decrese count. Reset button will reset button to zero.
