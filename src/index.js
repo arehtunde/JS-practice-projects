@@ -5,7 +5,7 @@ let count = 0;
 
 buttons.forEach((btn) => {
   btn.addEventListener('click', (e) => {
-    const style = e.target.classList;
+    const style = e.currentTarget.classList;
 
     if (style.contains('increase')) {
       counter.innerHTML = ++count;
