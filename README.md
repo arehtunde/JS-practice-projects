@@ -1,7 +1,5 @@
 # JS-practice-projects
 
-### Counter
+### Review
 
-Simple Counter to increment and decrement count
-
-Consist of 3 buttons to increase and decrese count. Reset button will reset button to zero.
+Review card project. There's next and previous button to navigaate between different reviews and random button to get random review. 
