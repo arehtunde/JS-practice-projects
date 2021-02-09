@@ -12,40 +12,35 @@ const nextBtn = document.querySelector('.right');
 const randomBtn = document.querySelector('.random');
 let current = 0;
 
-window.addEventListener('DOMContentLoaded', () => {
-  const loadPerson = reviews[current];
-
-  img.src = loadPerson.img;
-  name.textContent = loadPerson.name;
-  job.textContent = loadPerson.job;
-  text.textContent = loadPerson.text;
-});
-
-const showPerson = (id) => {
-  const person = reviews[id];
+const loadPerson = (index) => {
+  const person = reviews[index];
   img.src = person.img;
   name.textContent = person.name;
   job.textContent = person.job;
   text.textContent = person.text;
 };
 
+window.addEventListener('DOMContentLoaded', () => loadPerson(current));
+
 randomBtn.addEventListener('click', () => {
-  const randomNumber = Math.floor(Math.random() * reviews.length);
-  showPerson(randomNumber);
+  const random = Math.floor(Math.random() * reviews.length);
+  loadPerson(random);
 });
 
 nextBtn.addEventListener('click', () => {
   current++;
+
   if (current > reviews.length - 1) {
     current = 0;
   }
-  showPerson(current);
+  loadPerson(current);
 });
 
 prevBtn.addEventListener('click', () => {
   current--;
+
   if (current < 0) {
     current = reviews.length - 1;
   }
-  showPerson(current);
+  loadPerson(current);
 });
