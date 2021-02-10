@@ -11,117 +11,39 @@
 }
 
 body {
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f0eded;
   color: #011b33;
   font-family: 'Carter One', cursive;
 }
 
+.header {
+  border: 2px solid red;
+  display: flex;
+  justify-content: space-between;
+  padding: .5rem;
+}
+
+.nav {
+  border: 2px solid green;
+  align-self: center;
+
+  &_list {
+    display: flex;
+
+    &-items {
+      margin: 0 1rem;
+    }
+  }
+}
+
 .main {
-  width: Min(80vw, 70% + 3.125rem, 500px);
-  margin: 0 auto;
-  text-align: center;
+ flex: 1;
 }
 
-.title {
-  margin: 1rem 0;
-
-  &-line {
-    height: 0.25rem;
-    width: 5rem;
-    margin: 0 auto;
-    background-color: #d10f2a;
-  }
-}
-
-.info {
-  padding: 1rem .5rem;
-  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.4);
-}
-
-img {
-  background-color: #011b33;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  position: relative;
-  border-radius: 50%;
-}
-
-.img-wrapper {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 0 auto 1rem auto;
-
-  &::before {
-    display: grid;
-    place-items: center;
-    position: absolute;
-    top: 12px;
-    left: 0;
-    content: "\f10e";
-    width: 40px;
-    height: 40px;
-    background-color: #d10f2a;
-    color: #f2f2f2;
-    border-radius: 50%;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900; 
-    font-size: 1rem;
-    z-index: 1;
-  }
-
-  &::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: #d10f2a;
-    position: absolute;
-    top: -5px;
-    right: -8px;
-    border-radius: 50%;
-    z-index: -1;
-  }
-}
-
-.details {
-
-  &-name {
-    font-size: clamp(1.2rem, 0.6667rem + 2.6667vw, 1.5rem);
-  }
-
-  &-job {
-    color: #d10f2a;
-    margin-bottom: .5rem;
-  }
-}
-
-.arrow {
-  margin: 0 .5rem;
-  font-size: 2rem;
-  border: none;
-  color: #d10f2a;
-  cursor: pointer;
-}
-
-.random {
-  padding: .5rem 1rem;
-  margin-top: .5rem;
-  color: #d10f2a;
-  background-color: #f2f2f2;
-  border: 2px solid #d10f2a;
-  border-radius: 10px;
-  font-size: inherit;
-  font-family: inherit;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #d10f2a;
-    color: #f2f2f2;
-  }
+.footer {
+  border: 2px solid purple;
 }
