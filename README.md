@@ -1,5 +1,5 @@
 # JS-practice-projects
 
-### Review
+### Navbar
 
-Review card project. There's next and previous button to navigaate between different reviews and random button to get random review. 
+Project to show responsive navbar menu
