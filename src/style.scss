@@ -22,28 +22,72 @@ body {
 
 .header {
   border: 2px solid red;
+  padding: .5rem;
+
+  @media screen and (min-width: 600px) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.holder {
   display: flex;
   justify-content: space-between;
-  padding: .5rem;
+}
+
+.open {
+  align-self: center;
+  font-size: 1.5rem;
+  border: none;
+  transition: all 5s linear;
+
+  @media screen and (min-width: 600px) {
+    display: none;
+  }
+}
+
+.show {
+  display: none;
 }
 
 .nav {
-  border: 2px solid green;
-  align-self: center;
-
+  
   &_list {
-    display: flex;
-
+    
     &-items {
-      margin: 0 1rem;
+      padding-top: .5rem;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    display: block;
+    align-self: center;
+
+    &_list {
+      display: flex;
+  
+      &-items {
+        padding: 0;
+        margin: 0 .5rem;
+      }
     }
   }
 }
 
 .main {
- flex: 1;
-}
+  flex: 1;
+ }
 
-.footer {
+ .footer {
   border: 2px solid purple;
+  padding: .5rem 0;
+
+  &_list {
+    display: flex;
+    justify-content: center;
+
+    &-items {
+      margin: 0 .5rem;
+    }
+  }
 }

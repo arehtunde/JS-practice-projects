@@ -7,14 +7,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
-  <script defer type="module" src="src/index.js"></script>
+  <script defer src="src/index.js"></script>
   <title>Color Flipper</title>
 </head>
 <body>
   <header class="header">
-    <h1 class="title">Coding Addict</h1>
+    <div class="holder">
+      <h1 class="title">Coding Addict</h1>
+      <button class="open"><i class="fas fa-bars"></i></button>
+    </div>
 
-    <nav class="nav">
+    <nav class="nav show">
       <ul class="nav_list">
         <li class="nav_list-items">Home</li>
         <li class="nav_list-items">About</li>
@@ -27,11 +30,11 @@
   <main class="main"></main>
 
   <footer class="footer">
-    <ul>
-      <li>twitter</li>
-      <li>github</li>
-      <li>behance</li>
-      <li>linkedin</li>
+    <ul class="footer_list">
+      <li class="footer_list-items">behance</li>
+      <li class="footer_list-items">github</li>
+      <li class="footer_list-items">linkedin</li>
+      <li class="footer_list-items">twitter</li>
     </ul>
   </footer>
   <script src="https://kit.fontawesome.com/8c64d9042a.js" crossorigin="anonymous"></script>
