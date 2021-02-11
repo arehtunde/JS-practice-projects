@@ -21,8 +21,8 @@ body {
 }
 
 .header {
-  border: 2px solid red;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
 }
 @media screen and (min-width: 600px) {
   .header {
@@ -36,11 +36,16 @@ body {
   justify-content: space-between;
 }
 
+.title {
+  font-size: clamp(1.25rem, 0.7885rem + 2.3077vw, 2rem);
+}
+
 .open {
   align-self: center;
   font-size: 1.5rem;
+  margin-right: 0.5rem;
   border: none;
-  transition: all 5s linear;
+  color: #d10f2a;
 }
 @media screen and (min-width: 600px) {
   .open {
@@ -54,6 +59,10 @@ body {
 
 .nav_list-items {
   padding-top: 0.5rem;
+  cursor: pointer;
+}
+.nav_list-items:hover {
+  color: #d10f2a;
 }
 @media screen and (min-width: 600px) {
   .nav {
@@ -74,8 +83,8 @@ body {
 }
 
 .footer {
-  border: 2px solid purple;
   padding: 0.5rem 0;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
 }
 .footer_list {
   display: flex;
@@ -83,6 +92,8 @@ body {
 }
 .footer_list-items {
   margin: 0 0.5rem;
+  cursor: pointer;
+  font-size: clamp(1rem, 0.6923rem + 1.5385vw, 1.5rem);
 }
 
 /*# sourceMappingURL=style.css.map */
