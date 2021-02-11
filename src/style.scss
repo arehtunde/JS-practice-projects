@@ -11,95 +11,82 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   min-height: 100vh;
+  position: relative;
   background-color: #f0eded;
   color: #011b33;
   font-family: 'Carter One', cursive;
+  font-size: clamp(1rem, 0.6923rem + 1.5385vw, 1.5rem);
 }
 
-.header {
-  padding: 1rem .5rem;
-  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.4);
+.menu {
+  position: absolute;
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  border: 2px solid red;
+  position: absolute;
+  width: 100%;
+  background-color: yellow;
 
   @media screen and (min-width: 600px) {
-    display: flex;
-    justify-content: space-between;
+    width: 350px;
   }
 }
 
 .holder {
+  border: 2px solid purple;
   display: flex;
-  justify-content: space-between;
+  padding: 1rem .5rem;
 }
 
 .title {
   font-size: clamp(1.25rem, 0.7885rem + 2.3077vw, 2rem);
 }
 
-.open {
+.close {
   align-self: center;
+  margin-left: auto;
+  padding-right: .5rem;
   font-size: 1.5rem;
-  margin-right: .5rem;
   border: none;
-  color:#d10f2a;
-
-  @media screen and (min-width: 600px) {
-    display: none;
-  }
-}
-
-.show {
-  display: none;
+  background-color: inherit;
+  color: #d10f2a;
 }
 
 .nav {
-  
+  border: 2px solid red;
+  flex: 1;
+
   &_list {
     
     &-items {
-      padding-top: .5rem;
+      padding: .5rem;
       cursor: pointer;
 
       &:hover {
-        color: #d10f2a;
-      }
-    }
-  }
-
-  @media screen and (min-width: 600px) {
-    display: block;
-    align-self: center;
-
-    &_list {
-      display: flex;
-  
-      &-items {
-        padding: 0;
-        margin: 0 .5rem;
+        color: #f2f2f2;
+        background-color: #011b33;
       }
     }
   }
 }
 
-.main {
-  flex: 1;
- }
+.social {
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
 
- .footer {
-  padding: .5rem 0;
-  box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.4);
-
-  &_list {
-    display: flex;
-    justify-content: center;
-
-    &-items {
-      margin: 0 .5rem;
-      cursor: pointer;
-      font-size: clamp(1rem, 0.6923rem + 1.5385vw, 1.5rem);
-    }
+  &-items {
+    margin: 0 .5rem;
+    cursor: pointer;
   }
 }
