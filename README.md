@@ -1,5 +1,5 @@
 # JS-practice-projects
 
-### Navbar
+### Sidebar
 
-Project to show responsive navbar menu
+Project to show responsive sidebar menu
