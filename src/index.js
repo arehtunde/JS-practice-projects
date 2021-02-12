@@ -1,16 +1,12 @@
-const open = document.querySelector('.open');
-const nav = document.querySelector('.nav');
-const icon = document.querySelector('.fas');
+const menu = document.querySelector('.menu');
+const collapse = document.querySelector('.close');
+const sidebar = document.querySelector('.sidebar');
 
-const swiss = () => {
-  if (icon.classList.contains('fa-bars')) {
-    icon.classList.replace('fa-bars', 'fa-times');
-  } else {
-    icon.classList.replace('fa-times', 'fa-bars');
-  }
-};
+menu.addEventListener('click', () => {
+  sidebar.classList.toggle('show');
+});
 
-open.addEventListener('click', () => {
-  swiss();
-  nav.classList.toggle('show');
+collapse.addEventListener('click', () => {
+  sidebar.classList.remove('show');
+  console.log('nee');
 });

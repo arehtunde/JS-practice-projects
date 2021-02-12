@@ -24,18 +24,35 @@ body {
   position: absolute;
   top: 1.5rem;
   right: 2rem;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.1923rem + 1.5385vw, 2rem);
+  color: #d10f2a;
   border: none;
+  transition: all 0.3s linear;
+  animation: bounce 2s ease-in-out infinite;
+  cursor: pointer;
 }
 
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .sidebar {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  border: 2px solid red;
   position: absolute;
   width: 100%;
-  background-color: yellow;
+  background-color: #f3eaea;
+  transform: translate(-100%);
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s linear;
 }
 @media screen and (min-width: 600px) {
   .sidebar {
@@ -43,8 +60,11 @@ body {
   }
 }
 
+.show {
+  transform: translate(0);
+}
+
 .holder {
-  border: 2px solid purple;
   display: flex;
   padding: 1rem 0.5rem;
 }
@@ -55,16 +75,20 @@ body {
 
 .close {
   align-self: center;
-  margin-left: auto;
+  margin: 0 0.5rem 0 auto;
   padding-right: 0.5rem;
   font-size: 1.5rem;
   border: none;
   background-color: inherit;
   color: #d10f2a;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.close:hover {
+  transform: rotate(360deg);
 }
 
 .nav {
-  border: 2px solid red;
   flex: 1;
 }
 .nav_list-items {
@@ -84,6 +108,9 @@ body {
 .social-items {
   margin: 0 0.5rem;
   cursor: pointer;
+}
+.social-items:hover {
+  color: #d10f2a;
 }
 
 /*# sourceMappingURL=style.css.map */
