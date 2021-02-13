@@ -15,25 +15,26 @@ body {
   place-items: center;
   width: 100%;
   height: 100vh;
-  background: url(./hero.jpeg) center/cover no-repeat;
+  position: relative;
+  background: url(./dri.jpg) center/cover no-repeat;
   color: #011b33;
   font-family: "Carter One", cursive;
 }
 
 .header {
-  border: 2px solid red;
+  border-radius: 10px;
   width: min(90vw, 480px);
-  padding: 1rem 0;
+  padding: 3rem 0;
   text-align: center;
   box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
-  background-color: yellow;
+  background-color: #fff;
 }
 .header-title {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-size: clamp(2rem, 1.3846rem + 3.0769vw, 3rem);
 }
 
-.btn {
+.btn-open {
   min-width: 10ch;
   min-height: 44px;
   padding: 0.25em 0.75em;
@@ -48,27 +49,54 @@ body {
   transition: 220ms all ease-in-out;
   cursor: pointer;
 }
-.btn:hover, .btn:active {
+.btn-open:hover, .btn-open:active {
   background-color: #0037fe;
 }
-.btn:focus {
+.btn-open:focus {
   outline-style: solid;
   outline-color: transparent;
   box-shadow: 0 0 0 4px #0029be;
 }
 
 .modal {
-  border: 2px solid red;
-  width: min(90vw, 480px);
-  padding: 1rem 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(80vw, 360px);
+  padding: 1rem 0 2rem 0;
   text-align: center;
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
-  background-color: yellow;
   color: #011b33;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 .modal-title {
-  margin-bottom: 2rem;
+  margin-top: 1rem;
   font-size: clamp(1.5rem, 0.8846rem + 3.0769vw, 2.5rem);
+}
+
+.modal[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-close {
+  align-self: flex-end;
+  margin: 0.5rem 1rem 0 0;
+  color: #d10f2a;
+  border: none;
+  font-size: 1.5rem;
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: all 3s linear;
+}
+.btn-close:hover {
+  color: #e66b6b;
+  transform: scale(1.3);
 }
 
 /*# sourceMappingURL=style.css.map */

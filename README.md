@@ -1,5 +1,5 @@
 # JS-practice-projects
 
-### Sidebar
+### Modal
 
-Project to show responsive sidebar menu
+Project to show how to make modals with dialog tag

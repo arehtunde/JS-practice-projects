@@ -1,12 +1,11 @@
-const menu = document.querySelector('.menu');
-const collapse = document.querySelector('.close');
-const sidebar = document.querySelector('.sidebar');
+const openBtn = document.querySelector('.btn-open');
+const closeBtn = document.querySelector('.btn-close');
+const modal = document.querySelector('.modal');
 
-menu.addEventListener('click', () => {
-  sidebar.classList.toggle('show');
+openBtn.addEventListener('click', () => {
+  modal.showModal();
 });
 
-collapse.addEventListener('click', () => {
-  sidebar.classList.remove('show');
-  console.log('nee');
+closeBtn.addEventListener('click', () => {
+  modal.close();
 });
