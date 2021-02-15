@@ -1,5 +1,5 @@
 # JS-practice-projects
 
-### Modal
+### Questions
 
-Project to show how to make modals with dialog tag
+Project to display questions card
